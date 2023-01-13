@@ -10,7 +10,7 @@ const firebaseConfig = {
   appId: "1:853240824489:web:02de328f08dfb9ed7f1fb8"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore()
@@ -24,8 +24,8 @@ const cargarBDD = async () => {
             informacion: prod.informacion,
             idCategoria: prod.idCategoria,
             stock: prod.stock,
-            precio: prod.stock,
-            img: prod.stock
+            precio: prod.precio,
+            img: prod.img
 
 
         })
@@ -40,8 +40,8 @@ const getProductos = async() => {
 }
 
 const getProducto = async(id) => {
-const productos = await getDoc(doc(db,"productos", id))
-const item = {...productos.data(), id:productos.id}
+const producto = await getDoc(doc(db,"productos", id))
+const item = {...producto.data(), id:producto.id}
 return item
 }
 

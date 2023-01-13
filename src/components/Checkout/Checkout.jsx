@@ -14,7 +14,8 @@ const Checkout = () => {
     const {totalPrice, carrito, emptyCart} = useCarritoContext()
     const datosFormulario = React.useRef()
     let navigate = useNavigate()
-    //Realizo un check antes de completar el formulario por si no hay stock, por mas comodidad para el usuario
+    
+
     const checkCarritoVacio = [...carrito]
     checkCarritoVacio.forEach(prodCarrito => {
         getProducto(prodCarrito.id).then(prodBDD => {
@@ -48,17 +49,17 @@ const Checkout = () => {
     const validate = (values)=>{
         const errors ={};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;      
-        //Errores de nombre y apellido (que no los ingrese)
+        
         if (!values.nombreCompleto) {
             errors.nombreCompleto = "El nombre y apellido son necesarios";
         }
-        //Errores del email (que no lo ingrese, que no sea valido)
+        
         if (!values.email) {
             errors.email = "El email es requerido";
         } else if (!regex.test(values.email)) {
             errors.email = "Ese no es un formato valido de email";
         }
-        //Errores del email a validar (que no lo ingrese, que no sea valido, que no sea el mismo, que no sea valido podria borrarse ya que si es valido el primero solo con que sea igual ya es valido)
+       
         if (!values.validateEmail){
             errors.validateEmail = "Debe ingresar nuevamente el email";            
         }else if (!regex.test(values.validateEmail)) {
@@ -66,15 +67,15 @@ const Checkout = () => {
         }else if (values.validateEmail!==values.email){
             errors.validateEmail = "Los emails no coinciden";
         }
-        //Errores del DNI (que no lo ingrese, ya que sea un numero me aseguro dandole el tipo "number" al input)
+        
         if (!values.DNI){
             errors.DNI="Debe ingresar su DNI";
         }
-        //Errores del Celular (idem DNI)
+        
         if (!values.celular){
             errors.celular="Debe ingresar su celular";
         }
-        //Errores de la dirección (Que no la ingrese)
+      
         if (!values.direccion){
             errors.direccion="Debe ingresar su direccion";
         }

@@ -6,7 +6,7 @@ import { cargarBDD, getProductos, getProducto, updateProducto, deleteProducto } 
 
 
 const ItemListContainer = () => {
-    //cargarBDD();
+   // cargarBDD();
     const [productos, setProductos] = useState([]);
     const { categoria } = useParams();
 
@@ -24,8 +24,8 @@ const ItemListContainer = () => {
                 setProductos(cardProductos);
             });
         }
-        //cargarBDD().then(productos => console.log(productos))
-        //getProductos().then(productos => console.logs(productos))
+       cargarBDD().then(productos => console.log(productos))
+      // getProductos().then(productos => console.logs(productos))
         //getProducto("poner id el profe lo explico en firebase 2").then(prod => {
         //prod.stock -=5
         // updateProducto(prod.id, prod).then(estado => console.log(estado))

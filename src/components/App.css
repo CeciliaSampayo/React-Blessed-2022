@@ -1,3 +1,15 @@
+.card-title {
+    font-size: 16px;
+    margin-top: 15p;
+}
+
+.card-title:hover {
+   color: rgba(26, 110, 110, 0.418);
+}
+
+.imagenCard{
+    width: 270px;
+}
 .cardProducto {
     margin: 30px;
     width: 18rem;
@@ -20,7 +32,7 @@
     margin: 30px;
     width: 18rem;
     text-align: center;
-    color: rgb(2, 2, 84);
+    color: rgb(0, 0, 0);
     
 }
 
@@ -28,7 +40,7 @@
     margin: 30px;
     width: 18rem;
     text-align: center;
-    color: rgb(2, 2, 84);
+    color: rgb(0, 0, 0);
     
 }
 
@@ -58,34 +70,29 @@
 }
 
 .cardBodyDark{
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     text-align: center;
-    color: rgb(2, 2, 84);
+    color: rgb(255, 255, 255);
 }
 
 .darkMode{
-    color: white;
-    background-color: black;
+    color: rgb(236, 236, 236);
+    background-color: rgb(0, 0, 0);
 }
 
 .carritoVacio{
-
     text-align: center;
 }
 
 .cartList{
-
     margin-left: 40%;
     margin-right: 40%;
 }
 
 .cartItemDarkColor{
-    color: rgb(2, 2, 84); 
+    color: rgb(0, 0, 0); 
 }
 
-.colorMensajeCheckout{
-    color: red;
-}
 
 .cardCart {
     margin: 30px;
@@ -97,7 +104,7 @@
 
 
 .botonPrincipalNavBar{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .botonesNavBar {
@@ -105,11 +112,9 @@
 	display:inline-block;
 	cursor:pointer;
 	color: white;
-	font-family:Arial;
 	text-decoration:none;
     border: none;
     font-size: 1.5rem;
-    font-family: var(--bs-body-font-family);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -121,11 +126,6 @@
 	top:1px;
 }
 
-
-.imagenCard{
-    width: 250px;
-    height: 250px;
-}
 
 .cardBody{
     background-color: white;
