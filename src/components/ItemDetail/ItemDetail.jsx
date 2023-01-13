@@ -17,7 +17,7 @@ const ItemDetail = ({producto}) => {
                 <img className="imagenCard" src={producto.img} alt="" />
             </div>
             <div className="col-mb-8">
-                <h5 className="card-title cardTitulo">{producto.nombre}</h5>
+                <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">informacion: {producto.informacion} </p>
                 <p className="card-text">Precio: {new Intl.NumberFormat('de-DE').format(producto.precio)} </p>
                 <p className="card-text">Stock: {producto.stock}</p>
